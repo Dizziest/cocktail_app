@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
+import 'package:cocktailapp/models/serializer/serializers.dart';
 
 part 'cocktail_detailed_item.g.dart';
 
@@ -91,6 +92,6 @@ abstract class CocktailDetailedItem implements Built<CocktailDetailedItem, Cockt
     return serializers.deserializeWith(CocktailDetailedItem.serializer, json.decode(jsonString));
   }
 
-  static Serializer<CocktailDetailedItem> get serializer => _$cocktailDetailedItem;
+  static Serializer<CocktailDetailedItem> get serializer => _$cocktailDetailedItemSerializer;
 
 }

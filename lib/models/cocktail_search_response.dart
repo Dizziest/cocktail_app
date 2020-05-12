@@ -5,6 +5,9 @@ import 'dart:convert';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
+import 'package:cocktailapp/models/serializer/serializers.dart';
+
+import 'cocktail_item.dart';
 
 part 'cocktail_search_response.g.dart';
 
