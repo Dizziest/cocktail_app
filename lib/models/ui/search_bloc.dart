@@ -27,18 +27,24 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
   }
 
   Stream<SearchState> mapSearchInitiated(SearchInitiated event) async* {
-    if(event.query.isEmpty){
+    if (event.query.isEmpty) {
       yield SearchState.initial();
     } else {
       yield SearchState.loading();
 
-      try{
-        final searchResult = await _cocktailRepository.searchCocktails(event.query);
-        yield SearchState.success(searchResult);
+      try {
+        if (event.query == 'random'){
+          final searchResult = await _cocktailRepository.searchRandomCocktail();
+          yield SearchState.success(searchResult);
+        } else {
+          final searchResult = await _cocktailRepository.searchCocktails(event.query);
+          yield SearchState.success(searchResult);
+        }
       } on CocktailSearchError catch (e) {
         yield SearchState.failure(e.message);
       } on NoSearchResultsException catch (e) {
-        yield SearchState.failure(e.message)
+        yield SearchState.failure(e.message);
       }
+    }
   }
 }

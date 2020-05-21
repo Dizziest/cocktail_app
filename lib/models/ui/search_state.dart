@@ -1,7 +1,10 @@
+library search_state;
+
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:cocktailapp/models/cocktail_item.dart';
-import 'package:equatable/equatable.dart';
+
+part 'search_state.g.dart';
 
 abstract class SearchState implements Built<SearchState, SearchStateBuilder>{
 

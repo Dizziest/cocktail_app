@@ -10,6 +10,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CocktailDetailedItem.serializer)
       ..add(CocktailItem.serializer)
       ..add(CocktailSearchResponse.serializer)
+      ..add(DetailedCocktailSearchResponse.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(CocktailDetailedItem)]),
+          () => new ListBuilder<CocktailDetailedItem>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CocktailItem)]),
           () => new ListBuilder<CocktailItem>()))

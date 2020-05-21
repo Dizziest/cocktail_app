@@ -9,10 +9,12 @@ import 'package:built_value/standard_json_plugin.dart';
 import 'package:cocktailapp/models/cocktail_detailed_item.dart';
 import 'package:cocktailapp/models/cocktail_item.dart';
 import 'package:cocktailapp/models/cocktail_search_response.dart';
+import 'package:cocktailapp/models/detailed_cocktail_search_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor(const [
+  DetailedCocktailSearchResponse,
   CocktailSearchResponse,
   CocktailItem,
   CocktailDetailedItem
