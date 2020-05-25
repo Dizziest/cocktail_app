@@ -260,7 +260,7 @@ class _DetailPageState extends State<DetailPage> {
     addTagIfNotNull(cocktailItem.strMeasure14, measures);
     addTagIfNotNull(cocktailItem.strMeasure15, measures);
 
-    for (int i=0; i <= ingredients.length; i++){
+    for (int i=0; i < ingredients.length; i++){
       if(measures[i] != null){
         ingredients[i] = ingredients[i] + ' ' + measures[i];
       }
