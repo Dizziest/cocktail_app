@@ -194,23 +194,23 @@ class _DetailPageState extends State<DetailPage> {
   List<Widget> getTagsAsChipWidgets(CocktailDetailedItem cocktailItem) {
     List<String> tags = List<String>();
 
-    addTagIfNotNull(cocktailItem.strCategory, tags);
-    addTagIfNotNull(cocktailItem.strAlcoholic, tags);
-    addTagIfNotNull(cocktailItem.strIngredient1, tags);
-    addTagIfNotNull(cocktailItem.strIngredient2, tags);
-    addTagIfNotNull(cocktailItem.strIngredient3, tags);
-    addTagIfNotNull(cocktailItem.strIngredient4, tags);
-    addTagIfNotNull(cocktailItem.strIngredient5, tags);
-    addTagIfNotNull(cocktailItem.strIngredient6, tags);
-    addTagIfNotNull(cocktailItem.strIngredient7, tags);
-    addTagIfNotNull(cocktailItem.strIngredient8, tags);
-    addTagIfNotNull(cocktailItem.strIngredient9, tags);
-    addTagIfNotNull(cocktailItem.strIngredient10, tags);
-    addTagIfNotNull(cocktailItem.strIngredient11, tags);
-    addTagIfNotNull(cocktailItem.strIngredient12, tags);
-    addTagIfNotNull(cocktailItem.strIngredient13, tags);
-    addTagIfNotNull(cocktailItem.strIngredient14, tags);
-    addTagIfNotNull(cocktailItem.strIngredient15, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strCategory, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strAlcoholic, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient1, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient2, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient3, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient4, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient5, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient6, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient7, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient8, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient9, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient10, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient11, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient12, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient13, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient14, tags);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient15, tags);
     return tags.map((tag) {
       return Chip(
         label: Text(tag),
@@ -218,8 +218,8 @@ class _DetailPageState extends State<DetailPage> {
     }).toList();
   }
 
-  void addTagIfNotNull(String tag, List<String> list){
-    if (tag != null){
+  void addTagIfNotNullOrEmpty(String tag, List<String> list){
+    if (tag != null && tag != ""){
       list.add(tag);
     }
   }
@@ -228,41 +228,41 @@ class _DetailPageState extends State<DetailPage> {
     List<String> ingredients = List<String>();
     List<String> measures = List<String>();
 
-    addTagIfNotNull(cocktailItem.strIngredient1, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient2, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient3, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient4, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient5, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient6, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient7, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient8, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient9, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient10, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient11, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient12, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient13, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient14, ingredients);
-    addTagIfNotNull(cocktailItem.strIngredient15, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient1, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient2, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient3, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient4, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient5, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient6, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient7, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient8, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient9, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient10, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient11, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient12, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient13, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient14, ingredients);
+    addTagIfNotNullOrEmpty(cocktailItem.strIngredient15, ingredients);
 
-    addTagIfNotNull(cocktailItem.strMeasure1, measures);
-    addTagIfNotNull(cocktailItem.strMeasure2, measures);
-    addTagIfNotNull(cocktailItem.strMeasure3, measures);
-    addTagIfNotNull(cocktailItem.strMeasure4, measures);
-    addTagIfNotNull(cocktailItem.strMeasure5, measures);
-    addTagIfNotNull(cocktailItem.strMeasure6, measures);
-    addTagIfNotNull(cocktailItem.strMeasure7, measures);
-    addTagIfNotNull(cocktailItem.strMeasure8, measures);
-    addTagIfNotNull(cocktailItem.strMeasure9, measures);
-    addTagIfNotNull(cocktailItem.strMeasure10, measures);
-    addTagIfNotNull(cocktailItem.strMeasure11, measures);
-    addTagIfNotNull(cocktailItem.strMeasure12, measures);
-    addTagIfNotNull(cocktailItem.strMeasure13, measures);
-    addTagIfNotNull(cocktailItem.strMeasure14, measures);
-    addTagIfNotNull(cocktailItem.strMeasure15, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure1, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure2, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure3, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure4, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure5, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure6, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure7, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure8, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure9, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure10, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure11, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure12, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure13, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure14, measures);
+    addTagIfNotNullOrEmpty(cocktailItem.strMeasure15, measures);
 
-    for (int i=0; i < ingredients.length; i++){
+    for (int i=0; i < measures.length; i++){
       if(measures[i] != null){
-        ingredients[i] = ingredients[i] + ' ' + measures[i];
+        ingredients[i] = ingredients[i] + ' - ' + measures[i];
       }
     }
 
